@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
     "jsx": "react-jsx",
-    "strict": true,
+    "moduleResolution": "Node",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "resolveJsonModule":true,
-    "forceConsistentCasingInFileNames": true,
-    "typeRoots": ["./node_modules/@types", "./src/types"]
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "outDir": "dist"
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
